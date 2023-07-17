@@ -82,7 +82,7 @@ foreach ($queryRecords as $row) {
 
     $premium = '';
     if ($featured == "1"){
-        $premium = $premium.'<span class="badge fs-12">Đáng quan tâm</span>';
+        $premium = $premium.'<span class="badge fs-12">Hot trend</span>';
     }
 
     if($urgent == "1") {
@@ -90,7 +90,7 @@ foreach ($queryRecords as $row) {
     }
 
     if($highlight == "1") {
-        $premium = $premium.'<span class="badge btn-primary fs-12">Hot trend</span>';
+        $premium = $premium.'<span class="badge btn-primary fs-12">Top Picks</span>';
     }
 
     $status = '<span class="label label-info">Chờ phê duyệt</span>';

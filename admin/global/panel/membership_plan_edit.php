@@ -172,12 +172,12 @@ switch ($_GET['id']){
                             </div>
 
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Giới hạn đăng việc làm (Tối đa Không)</label>
+                                <label class="col-sm-4 control-label">Giới hạn đăng việc làm </label>
                                 <div class="col-sm-6">
                                     <input name="ad_limit" type="number" class="form-control" id="ad_limit"
                                         placeholder="Ad Limit" value="<?php echo stripslashes($settings['ad_limit']);?>"
                                         min="1" max="3">
-                                    <p class="help-block">For unlimited ads enter 999</p>
+                                    <p class="help-block">Không giới hạn nhập 999</p>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -189,7 +189,7 @@ switch ($_GET['id']){
 
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Phí huy hiệu đáng quan tâm</label>
+                                <label class="col-sm-4 control-label">Phí huy hiệu Hot trend</label>
                                 <div class="col-sm-6">
                                     <input name="featured_project_fee" type="number" class="form-control"
                                         id="featured_project_fee"
@@ -197,12 +197,12 @@ switch ($_GET['id']){
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Thời lượng đáng quan tâm</label>
+                                <label class="col-sm-4 control-label">Thời gian hiển thị Hot trend</label>
                                 <div class="col-sm-6">
                                     <input name="featured_duration" type="Text" class="form-control"
                                         id="featured_duration"
                                         value="<?php echo stripslashes($settings['featured_duration']);?>">
-                                    <p class="help-block">Thời lượng hiển thị Huy hiệu đáng quan tâm (tính bằng ngày).</p>
+                                    <p class="help-block">Thời lượng hiển thị Huy hiệu Hot trend (tính bằng ngày).</p>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -214,7 +214,7 @@ switch ($_GET['id']){
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Thời gian khẩn cấp</label>
+                                <label class="col-sm-4 control-label">Thời gian hiển thị Khẩn cấp</label>
                                 <div class="col-sm-6">
                                     <input name="urgent_duration" type="Text" class="form-control" id="urgent_duration"
                                         value="<?php echo stripslashes($settings['urgent_duration']);?>">
@@ -222,7 +222,7 @@ switch ($_GET['id']){
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Phí huy hiệu highlight</label>
+                                <label class="col-sm-4 control-label">Phí huy hiệu Top Picks</label>
                                 <div class="col-sm-6">
                                     <input name="highlight_project_fee" type="number" class="form-control"
                                         id="highlight_project_fee" placeholder="Hot trend Ad Fee"
@@ -230,12 +230,12 @@ switch ($_GET['id']){
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Thời gian huy hiệu highlight</label>
+                                <label class="col-sm-4 control-label">Thời gian hiển thị Hot Picks</label>
                                 <div class="col-sm-6">
                                     <input name="highlight_duration" type="Text" class="form-control"
                                         id="highlight_duration"
                                         value="<?php echo stripslashes($settings['highlight_duration']);?>">
-                                    <p class="help-block">Thời lượng hiển thị huy hiệu (tính bằng ngày).</p>
+                                    <p class="help-block">Thời lượng hiển thị huy hiệu Hot Picks (tính bằng ngày).</p>
                                 </div>
                             </div>
                             <h3 class="heading">Tùy chọn gói </h3>

@@ -486,7 +486,6 @@
                             <div id="ad_total_cost_container" class="text-right" style="display: none">
                                 <strong>
                                     <?php _e("Total") ?>:
-                                    <span class="currency-sign"><?php _esc($config['currency_sign'])?></span>
                                     <span id="totalPrice">0</span>
                                     <span class="currency-code"><?php _esc($config['currency_code'])?></span>
                                 </strong>

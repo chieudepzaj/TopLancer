@@ -188,7 +188,7 @@ $item_expire_date = $expire_date;
                                 <div class="col-sm-8" style="margin-left: 10px">
                                     <label class="css-input css-checkbox css-checkbox-primary">
                                         <input type="checkbox" name="featured" value="1"
-                                            <?php if($item_featured == '1') echo "checked"; ?>><span></span> Đáng quan tâm
+                                            <?php if($item_featured == '1') echo "checked"; ?>><span></span> Hot trend
                                     </label>
                                     <label class="css-input css-checkbox css-checkbox-primary">
                                         <input type="checkbox" name="urgent" value="1"
@@ -196,7 +196,7 @@ $item_expire_date = $expire_date;
                                     </label>
                                     <label class="css-input css-checkbox css-checkbox-primary">
                                         <input type="checkbox" name="highlight" value="1"
-                                            <?php if($item_highlight == '1') echo "checked"; ?>><span></span> Hot trend
+                                            <?php if($item_highlight == '1') echo "checked"; ?>><span></span> Top Picks
                                     </label>
 
                                 </div>

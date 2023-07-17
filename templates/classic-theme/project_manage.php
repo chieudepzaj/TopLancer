@@ -101,8 +101,8 @@ overall_header(__(""));
                                         <!-- Task Details -->
                                         <ul class="dashboard-task-info margin-bottom-5">
                                             <li><strong><?php _esc($item['bids_count'])?></strong><span><?php _e("Bids") ?></span></li>
-                                            <li><strong><?php _esc($config['currency_sign'])?><?php _esc($item['avg_bid'])?></strong><span><?php _e("Avg. Bid") ?></span></li>
-                                            <li><strong><?php _esc($config['currency_sign'])?><?php _esc($item['salary_min'])?>-<?php _esc($config['currency_sign'])?><?php _esc($item['salary_max'])?></strong><span><?php _esc($item['salary_type'])?></span></li>
+                                            <li><strong><?php _esc($item['avg_bid'])?><?php _esc($config['currency_code'])?></strong><span><?php _e("Avg. Bid") ?></span></li>
+                                            <li><strong><?php _esc($item['salary_min'])?><?php _esc($config['currency_code'])?>-<?php _esc($item['salary_max'])?><?php _esc($config['currency_code'])?></strong><span><?php _esc($item['salary_type'])?></span></li>
                                         </ul>
 
                                         <!-- Buttons -->

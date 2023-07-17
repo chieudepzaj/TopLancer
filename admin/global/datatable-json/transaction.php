@@ -102,7 +102,7 @@ foreach ($queryRecords as $row) {
 
 
         if ($featured == "1") {
-            $premium = $premium . '<span class="label label-warning">Đáng quan tâm</span>';
+            $premium = $premium . '<span class="label label-warning">Hot trend</span>';
         }
 
         if ($urgent == "1") {
@@ -110,7 +110,7 @@ foreach ($queryRecords as $row) {
         }
 
         if ($highlight == "1") {
-            $premium = $premium . '<span class="label label-info">Hot trend</span>';
+            $premium = $premium . '<span class="label label-info">Top Picks</span>';
         }
     }
 
