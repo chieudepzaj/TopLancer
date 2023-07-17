@@ -144,16 +144,16 @@ $pdo = ORM::get_db();
                             </div>
 
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Phí huy hiệu đáng quan tâm</label>
+                                <label class="col-sm-4 control-label">Phí huy hiệu Hot trend</label>
                                 <div class="col-sm-6">
                                     <input name="featured_project_fee" type="number" class="form-control" value="5">
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Thời lượng đáng quan tâm</label>
+                                <label class="col-sm-4 control-label">Thời gian huy hiệu Hot trend</label>
                                 <div class="col-sm-6">
                                     <input name="featured_duration" type="Text" class="form-control" value="30">
-                                    <p class="help-block">Thời lượng hiển thị Huy hiệu đáng quan tâm (tính bằng ngày).</p>
+                                    <p class="help-block">Thời lượng hiển thị Huy hiệu Hot trend (tính bằng ngày).</p>
                                 </div>
                             </div>
                             <div class="row form-group">
@@ -170,16 +170,16 @@ $pdo = ORM::get_db();
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Phí huy hiệu highlight</label>
+                                <label class="col-sm-4 control-label">Phí huy hiệu Top Picks</label>
                                 <div class="col-sm-6">
                                     <input name="highlight_project_fee" type="number" class="form-control" value="5">
                                 </div>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-4 control-label">Thời gian huy hiệu highlight</label>
+                                <label class="col-sm-4 control-label">Thời gian huy hiệu Top Picks</label>
                                 <div class="col-sm-6">
                                     <input name="highlight_duration" type="Text" class="form-control" value="30">
-                                    <p class="help-block">Thời lượng hiển thị huy hiệu (tính bằng ngày).</p>
+                                    <p class="help-block">Thời lượng hiển thị Top Picks (tính bằng ngày).</p>
                                 </div>
                             </div>
                             <h3 class="heading">Tùy chọn gói </h3>

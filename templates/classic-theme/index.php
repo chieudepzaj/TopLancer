@@ -532,8 +532,8 @@ global $config;
                                 <strong><?php _e("Features of") ?> <?php _esc($plan['title'])?></strong>
                                 <ul>
                                     <li><?php _e("Project Fee") ?> <?php _esc($plan['freelancer_commission'])?>%</li>
-                                    <li><?php _esc($plan['bids'])?> <?php _e("Bids") ?></li>
-                                    <li><?php _esc($plan['skills'])?> <?php _e("Skills") ?></li>
+                                    <li><?php if($plan['bids'] != 999) {_esc($plan['bids'])._e(" "). _e("Bids");}else {_esc("Không giới hạn")._e(" ")._e("Bids");} ?></li>
+                                    <li><?php if($plan['skills'] != 999) {_esc($plan['skills'])._e(" "). _e("Skills");}else {_esc("Không giới hạn")._e(" ")._e("Skills");} ?></li>
                                 </ul>
                             </div>
                             <?php
@@ -636,8 +636,7 @@ global $config;
                     <div class="single-counter">
                         <i class="icon-line-awesome-trophy"></i>
                         <div class="counter-inner">
-                            <h3><?php _esc($config['currency_sign']);?><span
-                                    class="counter"><?php _esc($community_earning);?></span></h3>
+                            <h3><span class="counter"><?php _esc($community_earning);?></span><?php _esc($config['currency_sign']);?></h3>
                             <span class="counter-title"><?php _e("Community Earnings") ?></span>
                         </div>
                     </div>

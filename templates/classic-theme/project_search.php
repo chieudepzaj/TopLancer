@@ -163,8 +163,8 @@ overall_header($pagetitle);
                         <div class="task-listing-bid">
                             <div class="task-listing-bid-inner">
                                 <div class="task-offers">
-                                    <strong><?php _esc($config['currency_sign'])?><?php _esc($item['salary_min'])?> -
-                                        <?php _esc($config['currency_sign'])?><?php _esc($item['salary_max'])?>
+                                    <strong><?php _esc($item['salary_min'])?><?php _esc($config['currency_code'])?> -
+                                        <?php _esc($item['salary_max'])?><?php _esc($config['currency_code'])?>
                                     </strong>
                                     <span><?php _esc($item['salary_type'])?></span>
                                 </div>
