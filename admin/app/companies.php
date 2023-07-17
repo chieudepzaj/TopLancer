@@ -1,6 +1,15 @@
 <?php
 require_once('../includes.php');
 ?>
+<style>
+    .limit-row {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+</style>
 <!-- Page JS Plugins CSS -->
 <link rel="stylesheet" href="../assets/js/plugins/datatables/jquery.dataTables.min.css" />
 <main class="app-layout-content">

@@ -80,7 +80,7 @@ foreach ($queryRecords as $row) {
     $id = $row['id'];
     $username = $row['username'];
     $title = htmlspecialchars($row['name']);
-    $desc = strlimiter(stripcslashes(($row['description'])), 100);
+    $desc = stripcslashes(($row['description']));
     $jobs = count_company_jobs($row['id']);
 
     if($row['logo'] != ""){
@@ -99,14 +99,14 @@ foreach ($queryRecords as $row) {
                 <p class="font-500 m-b-0"><a href="company_details.php?id='.$id.'" target="_blank">'.$title.'</a></p>
                 <p class="text-muted m-b-0">'.$jobs.' việc làm'.'</p>
             </td>';
-    $row2 = '<td class="hidden-xs">'.$desc.'</td>';
+    $row2 = '<td class="hidden-xs"><p class="limit-row">'.$desc.'</p></td>';
     $row3 = '<td class="hidden-xs">'.$username.'</td>';
     $row4 = '<td class="hidden-xs hidden-sm">'.$row['cityname'].'</td>';
 
     $row5 = '<td class="text-center">
                 <div class="btn-group">
-                    <a href="#" data-url="panel/company_edit.php?id='.$id.'" data-toggle="slidePanel"  title="Edit" class="btn btn-xs btn-default"> <i class="ion-edit"></i> </a>
-                    <a href="#" title="Delete" class="btn btn-xs btn-default item-js-delete" data-ajax-action="deleteCompany"><i class="ion-close"></i></a>
+                    <a href="#" data-url="panel/company_edit.php?id='.$id.'" data-toggle="slidePanel"  title="Sửa" class="btn btn-xs btn-default"> <i class="ion-edit"></i> </a>
+                    <a href="#" title="Xóa" class="btn btn-xs btn-default item-js-delete" data-ajax-action="deleteCompany"><i class="ion-close"></i></a>
                 </div>
             </td>';
     $value = array(
