@@ -693,7 +693,7 @@ global $config;
 <?php } ?>
 <!-- Recent Blog Posts / End -->
 <div class="hidden-xs jas-sale-pop flex pf middle-xs slideUp"><a href="#" class="jas-sale-pop-img mr__20"><img
-            src="storage/logo/logo_welcome.jpg" alt="Chào mừng bạn tới trang tìm kiếm việc làm TopLancer"></a>
+src="<?php echo $config['site_url'];?>storage/logo/<?php echo $config['site_admin_logo']?>" alt="Chào mừng bạn tới trang tìm kiếm việc làm TopLancer"></a>
     <div class="jas-sale-pop-content">
         <h3 class="mg__0 mt__5 mb__5 fs__18"><a href="#"
                 title="Chào mừng bạn tới trang tìm kiếm việc làm TopLancer">Chào mừng bạn tới trang tìm kiếm việc làm
