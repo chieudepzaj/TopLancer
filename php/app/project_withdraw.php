@@ -5,25 +5,29 @@ if(checkloggedin()) {
     if(isset($_POST['Submit']) && isset($_POST['payment_id']))
     {
         if(is_numeric($_POST['amount']) || $_POST['amount'] > 0){
-            $userdata = get_user_data(null,$_SESSION['user']['id']);
-            $balance = $userdata['balance'];
-            if($balance >= $_POST['amount']){
-                minus_balance_withdraw($_SESSION['user']['id'],$_POST['amount']);
-                $now = date("Y-m-d H:i:s");
-                $create_withdraw = ORM::for_table($config['db']['pre'].'withdrawal')->create();
-                $create_withdraw->user_id = $_SESSION['user']['id'];
-                $create_withdraw->amount = validate_input($_POST['amount']);
-                $create_withdraw->payment_method_id = validate_input($_POST['payment_id']);
-                $create_withdraw->account_details = validate_input($_POST['account_details']);
-                $create_withdraw->created_at = $now;
-                $create_withdraw->save();
+            if($_POST['amount'] >= $config['payment_minimum_withdraw']) {
+                $userdata = get_user_data(null,$_SESSION['user']['id']);
+                $balance = $userdata['balance'];
+                if($balance >= $_POST['amount']){
+                    minus_balance_withdraw($_SESSION['user']['id'],$_POST['amount']);
+                    $now = date("Y-m-d H:i:s");
+                    $create_withdraw = ORM::for_table($config['db']['pre'].'withdrawal')->create();
+                    $create_withdraw->user_id = $_SESSION['user']['id'];
+                    $create_withdraw->amount = validate_input($_POST['amount']);
+                    $create_withdraw->payment_method_id = validate_input($_POST['payment_id']);
+                    $create_withdraw->account_details = validate_input($_POST['account_details']);
+                    $create_withdraw->created_at = $now;
+                    $create_withdraw->save();
 
-                message(__("Success"),__("Amount added Successfully to withdrawal."),$link['WITHDRAW']);
-                exit();
+                    message(__("Success"),__("Amount added Successfully to withdrawal."),$link['WITHDRAW']);
+                    exit();
+                }else{
+                    $error = __("Insufficient fund withdrawal amount must be lower than your wallet.");
+                }
             }else{
-                $error = __("Insufficient fund withdrawal amount must be lower than your wallet.");
-            }
-
+                $min_amount = price_format($config['payment_minimum_withdraw']);
+                $error = __("You must withdraw more than").' '.$min_amount;
+            }   
         }else{
             $error = __("Amount not valid");
         }

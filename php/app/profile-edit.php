@@ -25,7 +25,7 @@ if (checkloggedin()) {
             }
         }
 
-        if ($errors == 0 && !empty($_FILES["avatar"])) {
+        if ($errors == 0 && isset($_FILES["avatar"]) && is_uploaded_file($_FILES['avatar']['tmp_name'])) {
             $target_dir = ROOTPATH . "/storage/profile/";
             $result = quick_file_upload('avatar',$target_dir);
             if($result['success']){

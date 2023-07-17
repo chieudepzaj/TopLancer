@@ -83,7 +83,7 @@ overall_header(__("Dashboard"));
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-md-6 col-sm-12 text-right">
-                                <span class="dashboard-badge"><strong><?php _esc($config['currency_sign'])?><?php _esc($balance)?></strong><i
+                                <span class="dashboard-badge"><strong><?php _esc($balance)?><?php _esc($config['currency_sign'])?></strong><i
                                             class="fa fa-money"></i> <?php _e("Balance") ?></span>
                                     <span class="dashboard-badge"><strong>
                                             <?php
